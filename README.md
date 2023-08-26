@@ -9,3 +9,5 @@ Add new Blogs.
 Edit Blogs.
 Delete a single Blog.
 Link a Blog to a User using the database Model.
+
+## Updates:
