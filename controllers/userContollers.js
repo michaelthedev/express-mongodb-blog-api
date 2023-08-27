@@ -11,15 +11,6 @@ const getAllUsers = async(req,res)=>{
         console.log(error.message);
     }
 }
-const logIn = async(req,res)=>{
-    const { email, password} =req.body
-    try {
-         await User.comparePassword(email, password)
-         return res.status(200).json({message:'You are now logged In!'})
-    } catch (error) {
-        return res.status(404).json({message:error.message})
-    }
-}
 module.exports = {
     getAllUsers,
     signUp,
