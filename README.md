@@ -11,3 +11,7 @@ Delete a single Blog.
 Link a Blog to a User using the database Model.
 
 ## Updates:
+- Added authRoutes for /auth/* routes
+- Added authController to handle /auth/* route requests
+- Separation of concern: Removed login and signup logic from userController and added it to authController
+- Added getSingleUser method to userController
