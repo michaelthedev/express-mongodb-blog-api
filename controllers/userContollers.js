@@ -29,8 +29,9 @@ const getAllUsers = async(req, res)=>{
  */
 const getSingleUser = async(req, res)=>{
     try {
-        let {email} = req.body;
-        let users = await User.findOne({email})
+        // todo: Create user id property in database schema
+        const userId = req.params.userId;
+        let users = await User.findOne({email: userId})
         if (!users) {
             return res.status(404)
                 .json({message: 'User was not found'})
