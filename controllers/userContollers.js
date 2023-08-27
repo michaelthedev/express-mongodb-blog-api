@@ -19,7 +19,7 @@ const getAllUsers = async(req, res)=>{
     } catch (error) {
         console.log(error.message);
     }
-    return res.status(200).json({users})
+}
     } catch (error) {
         console.log(error.message);
     }
