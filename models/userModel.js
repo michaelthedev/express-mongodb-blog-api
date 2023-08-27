@@ -33,6 +33,7 @@ const userSchema = new Schema(
 userSchema.pre("save", async function () {
   this.password = await bcrypt.hash(this.password, 10);
 });
+
 userSchema.statics.comparePassword = async function (email, password) {
   let user = await this.findOne({ email });
   if (user) {
