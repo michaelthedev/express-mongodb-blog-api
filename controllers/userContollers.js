@@ -1,6 +1,12 @@
 const User = require('../models/userModel')
 
-const getAllUsers = async(req,res)=>{
+/**
+ * Get all users
+ * @param req
+ * @param res
+ * @returns {Promise<*>}
+ */
+const getAllUsers = async(req, res)=>{
     try {
         let users = await User.find()
     if(!users){
