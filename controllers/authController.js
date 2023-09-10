@@ -52,3 +52,8 @@ const signup = async(req,res)=>{
         console.log(error.message);
     }
 }
+
+module.exports = {
+    login,
+    signup
+}
